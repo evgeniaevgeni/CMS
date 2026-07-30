@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивные прототипы</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+        }
+        
+        .card-preview {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .card-content {
+            padding: 24px;
+        }
+        
+        .card-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        
+        .card-desc {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .card-button {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .card-button:hover {
+            background: #5568d3;
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-top: 40px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Интерактивные прототипы</h1>
+        <p class="subtitle">Выберите прототип для просмотра</p>
+        
+        <div class="cards">
+            <!-- Карточка Календаря -->
+            <div class="card">
+                <div class="card-preview">📅</div>
+                <div class="card-content">
+                    <h2 class="card-title">Календарь</h2>
+                    <p class="card-desc">
+                        Интерактивный прототип календаря с возможностью навигации по датам и событиями.
+                    </p>
+                    <a href="calendar.html" class="card-button">Открыть прототип →</a>
+                </div>
+            </div>
+            
+            <!-- Карточка Мониторинга -->
+            <div class="card">
+                <div class="card-preview">📊</div>
+                <div class="card-content">
+                    <h2 class="card-title">Мониторинг</h2>
+                    <p class="card-desc">
+                        Интерактивный прототип карточек мониторинга с данными и фильтрами.
+                    </p>
+                    <a href="monitoring.html" class="card-button">Открыть прототип →</a>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer">Обновлено: Июль 2026</p>
+    </div>
+</body>
+</html>
